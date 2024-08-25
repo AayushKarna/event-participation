@@ -66,6 +66,7 @@ const getAllParticipants = async function () {
         participant.registration_number,
         participant.full_name,
         participant.email,
+        participant.phone,
         participant.registered_at,
         `<button data-id="${participant.id}" class="delete-btn">Delete</button>`
       ];
