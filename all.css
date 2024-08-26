@@ -5,6 +5,7 @@ body {
   margin-inline: auto;
   align-items: flex-start;
   margin-top: 4rem;
+  overflow: auto;
 }
 
 body main {
