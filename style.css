@@ -12,12 +12,15 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  height: 75vh;
-
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .hidden-el {
@@ -25,12 +28,22 @@ body {
 }
 
 .card {
-  background: #BADA55;
-  flex-basis: 40rem;
-  padding: 1.4rem 2.8rem;
-  border-radius: 7px;
-  padding-top: 1.8rem;
-  padding-bottom: 2.4rem;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.form-header {
+  font-family: "Lobster", cursive;
+  font-size: 36px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
 }
 
 .card-heading {
@@ -45,6 +58,36 @@ body {
   gap: 1.4rem;
 }
 
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.form-group i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 40px 12px 40px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* 
 .registration-form label {
   display: flex;
   flex-direction: column;
@@ -60,7 +103,7 @@ body {
 
   border: none;
   border-radius: 5px;
-}
+} */
 
 .registration-form button {
   padding: 1rem 2rem;
@@ -71,7 +114,7 @@ body {
   color: #fff;
   margin-top: 1rem;
   font-size: 1.6rem;
-  transition: background .3s, color .3s;
+  transition: background 0.3s, color 0.3s;
 
   display: flex;
   justify-content: center;
@@ -132,6 +175,7 @@ body {
 
 .success-card h3 {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 3.4rem;
   margin-bottom: 0;
 }
@@ -160,4 +204,41 @@ body {
 
 .alert--success {
   background: #21ba45;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+  }
+
+  .form-header {
+    font-size: 28px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 35px 12px 35px;
+  }
+
+  .submit-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-header {
+    font-size: 24px;
+  }
+
+  .form-group i {
+    left: 8px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 30px 12px 30px;
+  }
 }
