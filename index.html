@@ -19,13 +19,18 @@
     />
     <link rel="stylesheet" href="style.css" />
 
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"
+    ></script>
+
     <script defer src="script.js"></script>
 
     <title>Registration form</title>
   </head>
   <body>
     <div class="card" id="registraion-card">
-      <h2 class="form-header">2080 Batch Giveaway Form</h2>
+      <h2 class="form-header">2080 Batch Registration Form</h2>
 
       <form action="#!" class="registration-form" id="registration-form">
         <div class="form-group">
@@ -45,10 +50,11 @@
         <div class="form-group">
           <i class="fas fa-phone"></i>
           <input
-            type="text"
+            type="tel"
             name="phone"
             id="phone-number"
             placeholder="Contact Number"
+            pattern="^[0-9+\-\s]+$"
             required
           />
         </div>
@@ -63,9 +69,16 @@
     <div class="card success-card hidden-el" id="success-card">
       <img src="checked.png" alt="Check Mark" class="check-mark" />
       <h3>Successful</h3>
+      <div class="qrCode"></div>
       <p>
         Registraion Successful! Your registration number is
         <strong id="registration-number-container">12786</strong>.
+      </p>
+      <p>
+        <strong>
+          You must enter this QR code in order to receive goodies.Thus, do
+          preserve this QR code.
+        </strong>
       </p>
     </div>
   </body>
